@@ -10,5 +10,5 @@ game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
   end
 end
 
-AutoFarm = true
+_G.AutoFarm = true
 AutoFarm()
