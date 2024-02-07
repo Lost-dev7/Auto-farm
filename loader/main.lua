@@ -1,4 +1,4 @@
-function AutoRed()
+function AutoFarm()
   while _G.AutoFarm == true do task.wait(0.1)
     local args = {
     [1] = "collectOrb",
@@ -7,11 +7,7 @@ function AutoRed()
 }
 
 game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
-  end
-end
 
-function AutoBlue()
-  while _G.AutoFarm2 == true task.wait(0.1)
      local args = {
     [1] = "collectOrb",
     [2] = "Blue Orb",
@@ -19,11 +15,15 @@ function AutoBlue()
 }
 
 game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "joinRace"
+}
+
+game:GetService("ReplicatedStorage").rEvents.raceEvent:FireServer(unpack(args))
+
   end
 end
 
 _G.AutoFarm = true
-AutoRed()
-
-_G.AutoFarm2 = true
-AutoBlue()
+AutoFarm()
