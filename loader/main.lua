@@ -19,7 +19,6 @@ function AutoBlue()
 }
 
 game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(args))
-
   end
 end
 
